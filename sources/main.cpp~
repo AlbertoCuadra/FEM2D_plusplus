@@ -1,0 +1,25 @@
+#include "header.h"
+#include "mesh.h"
+#include "dato.h"
+#include<stdlib.h>
+
+
+main() {
+  
+   dato datos;
+   datos.leedatos();
+    
+   Mfinel<P1> Malla; // Elijo EN ESTE MOMENTO el tipo de Elemento finito, P1
+   
+   Malla.fill_mesh(datos); // lee los mallados desde fichero
+   
+   Malla.print_nodes(); // Imprimimos los nodos
+   Malla.print_elements(); // Imprimimos los elementos
+   
+   exit(-1);
+      
+   return 0;
+}
+
+
+                

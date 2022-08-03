@@ -1,0 +1,39 @@
+/*
+ * Elemento finito P1
+ */
+
+#ifndef __P1_
+#define __P1_
+
+class P1{
+    public:
+        // Atributos
+        int N;        // numero de vertives
+        point** V;    // puntero de puntero a vertices del el finito: contiene tres punteros
+		      // que guardan la direccion de memoria de los vertices, ya creados
+        // Metodos de la clase Q1
+        P1();
+        void print_finel();
+};
+
+
+
+P1::P1(){
+    
+ this->N=3;
+ this->V=new point*[3];
+
+ 
+}
+
+
+void P1::print_finel(){
+    cout<<"---------------"<<endl;
+    for (int k=0;k<(this->N);k++){
+        this->V[k]->print_point();
+    }
+    cout<<"---------------"<<endl;
+}
+
+
+#endif
